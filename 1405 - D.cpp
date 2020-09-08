@@ -6,7 +6,7 @@
 using namespace std;
 #define vi vector<int>
 #define vvi vector<vector<int>>
-#define debug cout << "here" << endl;
+#define debug cout <<  "here" << endl;
 #define rep(i,n) for(int i = 0 ; i<n ; ++i)
 #define pb push_back
 #define ff first
