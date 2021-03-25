@@ -2,6 +2,7 @@
 #define int long long
 #define float double
 #define sz 100005
+#define all(a) a.begin(), a.end()
 #define mod 1000000007
 using namespace std;
 #define vi vector<int>
@@ -114,6 +115,29 @@ int query(int s, int e, int qs, int qe, vi &seg, vi &lazy, int index)
     int a = query(s, mid, qs, qe, seg, lazy, 2 * index);
     int b = query(mid + 1, e, qs, qe, seg, lazy, 2 * index + 1);
     return max(a, b);
+}
+
+void printBinaryString(int n)
+{
+    vi temp;
+    while (n)
+    {
+        if (n & 1)
+            temp.pb(1);
+        else
+            temp.pb(0);
+        n = n >> 1;
+    }
+    reverse(temp.begin(), temp.end());
+    for (auto node : temp)
+        cout << node << " ";
+    cout << endl;
+}
+
+void readVector(vi &a)
+{
+    int n = a.size();
+    rep(i, n) cin >> a[i];
 }
 
 //vi primes;
